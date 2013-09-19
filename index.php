@@ -64,7 +64,7 @@ $gold = array(
 'Shape Blue' => 'http://www.shapeblue.com/',
 'NetApp' => 'http://www.netapp.com',
 'Cloudsoft' => 'http://www.cloudsoftcorp.com/',
-'Nexenta' => 'http://www.nexenta.com'
+'Nexenta' => 'http://www.nexenta.com',
 'ikoula => 'http://www.ikoula.com/'
 );
 $silver = array(
