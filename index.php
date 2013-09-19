@@ -69,7 +69,8 @@ $gold = array(
 );
 $silver = array(
 'Atom 86' => 'http://www.atom86.net/',
-'Apalia' => 'http://www.apalia.net/'
+'Apalia' => 'http://www.apalia.net/',
+'Elasticsearch' => 'http://www.elasticsearch.com'
 );
 $community = array(
 'Apache' => 'http://www.apache.org/'
