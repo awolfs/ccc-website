@@ -21,6 +21,7 @@ body{
 }
 td{
 	text-align:left;
+	margin-top: 15px;
 }
 th{
 	background-color:grey;
