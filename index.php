@@ -132,7 +132,7 @@ else
 {
 require_once('./pages/404.phtml');
 }
-if($page === 'sponsors'){ sponsorblock('current', 'Sponsors'); sponsorblock('old', 'Previous sponsors'); }; 
+if($page === 'sponsors'){ sponsorblock('current', 'Sponsors'); }; 
 echo '</section>';
 }
 elseif($page === 'registration')
