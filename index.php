@@ -58,7 +58,6 @@ $diamond = array(
 'Citrix' => 'http://www.citrix.com/'
 );
 $platinum = array(
-
 );
 $gold = array(
 'Shape Blue' => 'http://www.shapeblue.com/',
@@ -66,6 +65,9 @@ $gold = array(
 'Cloudsoft' => 'http://www.cloudsoftcorp.com/',
 'Nexenta' => 'http://www.nexenta.com',
 'Ikoula' => 'http://express.ikoula.co.uk/'
+);
+$gold2 = array(
+'Leaseweb' => 'http://www.leaseweb.com/',
 );
 $silver = array(
 'Atom 86' => 'http://www.atom86.net/',
@@ -93,6 +95,7 @@ echo '<br class="clear"/><h1><span>Sponsors</span></h1>';
 echo (!empty($diamond)) ? sponsorbar('Diamond', $diamond) : '';
 echo (!empty($platinum)) ? sponsorbar('Platinum', $platinum) : '';
 echo (!empty($gold)) ? sponsorbar('Gold', $gold) : '';
+echo (!empty($gold2)) ? sponsorbar('Gold', $gold2) : '';
 echo (!empty($silver)) ? sponsorbar('Silver', $silver) : '';
 echo (!empty($community)) ? sponsorbar('Community', $community) : '';
 echo (!empty($hackathon)) ? sponsorbar('Hackathon', $hackathon) : '';
