@@ -71,5 +71,178 @@ It is assumed that attendees will have some experience administering CloudStack 
         <td>"The focus of this talk is on the challenges overcome in setting up repeatable cloud infrastructure using Apache CloudStack for testing Apache CloudStack.
 Dogfooding has provided us with a great way to push testing of cloud systems and turn them in to test-as-a-service clouds. The Apache CloudStack test infrastructure brings together such a solution for operators and quality assurance teams to deploy continuous integration systems that are remotely managed, monitored and be used as test beds. The talk will also focus on the future directions of this infrastructure and show how companies deploying cloudstack can readily get involved in quality assurance through the shared use of such test infrastructure."<br></td>
     </tr>
+    <tr>
+        <td>	Caffeinated Clouds: Cloud hacking in Java with CloudStack, jclouds and Whirr	</td>
+        <td>	Andrew Bayer	</td>
+        <td>	Andrew Bayer is the build and tools architect at Cloudera, and, among other open source roles, is the VP of the Apache Whirr project and a core contributor and PPMC member on the Apache jclouds (incubating) project. He's probably the biggest fan of how powerful the CloudStack API is. Seriously, he loves it.	</td>
+        <td>	Are you building an application on top of a CloudStack cloud that needs to be able to provision instances, gather usage information, configure CloudStack itself, etc? Are you looking for a handy way to automate CloudStack administration tasks from within a JVM environment? Do you want to spin up a cluster running a distributed system like Apache Hadoop without a lot of hassle? Well, then jclouds, Whirr and CloudStack all together seems like a perfect fit! We'll be looking at how jclouds and Whirr can enable you to build and deploy complex CloudStack-aware applications that can take advantage of the full power of the CloudStack API.	</td>
+    </tr>
+    <tr>
+        <td>	Cloud Education	</td>
+        <td>	Gregg Witkin	</td>
+        <td>		</td>
+        <td>	"Hello Gentlemen,
+I would like to propose a session at this Fall's CloudStack collaboration conference. I would like to host a session (possibly with local Dutch teachers) aimed at getting CloudStack developers and decision makers to consider the use of educational virtualization and plan for the future use and growth in education. 
+I have been a high school video and technology teacher for the past 17 years in the Silicon Valley and have seen huge changes in the use of technology both for personal use and for the important task of educating future generations. Over the past three summers participating in the IISME program (which matches teachers with private companies for summer intern work), two of which were in the CloudStack group at Citrix, I have developed an interesting level of knowledge of both the development of CloudStack and the need for technology in education. 
+I also have no problem presenting to groups of 5-500 people. I have presented to teachers, policy makers and others in education and have been honored by our State Senate for my work in technology. 
+I think it would be an amazing opportunity to lead a session that helps take some of the best minds in all the areas of Cloud development and focuses them for an hour to make concrete steps to increase both the visibility and adoption of cloud based technology for students under 18 years of age.
+Ideally the session would be a work/plan session where I would help identify areas of need in education and the developers, contributors and even sponsors would have the opportunity to brainstorm solutions and pathways for schools and educational policy makers to follow. Only positive outcomes could come from such an influential group of tech specialists.
+I realize there is much more for me to learn, but I believe that a session like this would be very popular and could produce incredible results.
+"	</td>
+    </tr>
+    <tr>
+        <td>	DataDisk/UserData Independence In the Cloud	</td>
+        <td>	Rajesh Battala	</td>
+        <td>	"Rajesh works as a Senior Software Engineer with Citrix. He is an active contributor to Apache CloudStack and even demonstrated Cloudstack at Foss 2012 and ApacheBarCamp Bangalore.
+With extensive experience and a varied skill set, Rajesh contributes to and works on multiple projects. He actively participates in conducting the cloudstack meetups. He also worked on Virtualization products in Novell Cloud Manager, PlateSpin Recon etc. and was a contributor to Jython language and Gnome Evolution. 
+He is extremely passionate about technology and his current interests include Linux, Server Virtualization and IAAS. He loves to share his knowledge to help others acquire new skills. Besides conducting training on his favorite subjects, he enjoys writing articles, is an avid reader, and even plays musical instruments.
+"	</td>
+        <td>	"This idea is to help the users of the CloudStack to migrate their data across their Vm’s which are running in different hypervisors.
+Use Case: In CloudStack, when there are mixed hypervisors in the zone. When the user is having VM’s across multiple hypervisors. In CloudStack when User deploys a VM’s it will have only ROOT disk which contains the Operating System files.
+He creates DataDisk to store his files. 
+When he creates the DataDisk and attaches to the user VM running on KVM host, then the disk format will be in qcow2. User will have the independence to detach and attach across his Vm’s running on KVM hypervisor type. But if the user wants to attach the same disk where his data id residing or download and upload to another zone where other hypervisors are running (xen, vmware, etc) as those hypervisors don’t understand the format he won’t be able to use his data disk. This situation can arise in case when he uploads his datadisk and there is no supported hypervisor present or not available for him to use.
+In case where he has two VM’s one on kvm and another on Xen, and xen went down for some reasons then he wants to use the same datadisk on kvm vm.
+One solution is to copy the data over network, but this will cause his the network bandwidth usage which may result in increasing his usage bill.
+One of the best ways is, let the cloudstack convert the image format according to the type of the hypervisor when he wants to migrate the datadisk.
+How it can work:
+1. When user created a volume and attach to the VM (assume its running on KVM) then a volume will be created on the primary storage and it will copied to the secondary storage. Now the format of the datadisk will be in qcow2. 
+2. When the user wants to attach the disk to another VM running ( Xen/Vmware) then in the secondary storage duplicate the current volume and then find the virtual harddisk format supported by the hypervisor.
+3. Convert the volume from qcow2 to the supported format of the hypervisor and then copy it to the primary storage and then attach to the VM.
+4. To convert the image in the secondary storage VM (ssvm), it requires tools qemu-img or vboxmanage tools. If these tools are bundled with the ssvm template then this process can be achieved.
+With this process the User will get the independence to manage his datadisks across hypervisors in-case of using the same volume or in case of unavailability of the supported format hypervisor in the cloudstack management.
+"	</td>
+    </tr>
+    <tr>
+        <td>	Multiple IPs to guest nic	</td>
+        <td>	Jayapal Reddy Uradi	</td>
+        <td>	Jayapal has 4+ years of development experience in linux networking domain. He worked on various network devices like firewall, routers and ONT platform developement. He also worked on linux iptables and linux system programming. He is currently working as Software Dev Engg in Citrix Systems India Pvt Ltd. He is Apache cloudstack committer.	</td>
+        <td>	"Cloudstack users are looking for multiple ip address to guest vm nic to run various services. Some of the use cases for multiple ips are:
+- Host multiple ssl websites on signle instance, associated with distinct ip address.
+- Build network appliances such as firewall and LB that require multiple ip address.
+- Cloudstack users need those ips to enable PF, Static NAT and LB services.
+This paper discusses the following:
+1. Multiple ip allocation in advanced isolated networks.
+2. Configuring PF and static NAT services on secondary IPs
+2. Multiple ip allocation in shared networks with security groups
+3. Configuring anti spoofing on all the ips in shared networks using security groups.
+"	</td>
+    </tr>
+    <tr>
+        <td>	Deploying vApp (Stack of services/instances) with user defined template from CloudStack	</td>
+        <td>	Rajesh Battala	</td>
+        <td>	"Rajesh works as a Senior Software Engineer with Citrix. He is an active contributor to Apache CloudStack and even demonstrated Cloudstack at Foss 2012 and ApacheBarCamp Bangalore.
+With extensive experience and a varied skill set, Rajesh contributes to and works on multiple projects. He actively participates in conducting the cloudstack meetups. He also worked on Virtualization products in Novell Cloud Manager, PlateSpin Recon etc. and was a contributor to Jython language and Gnome Evolution. 
+He is extremely passionate about technology and his current interests include Linux, Server Virtualization and IAAS. He loves to share his knowledge to help others acquire new skills. Besides conducting training on his favorite subjects, he enjoys writing articles, is an avid reader, and even plays musical instruments.
+"	</td>
+        <td>	"This idea will help the cloud admin/user to deploy the Stack of instance which can act as his service solution.
+Use Case: Suppose cloud admin/user wants to deploy a web service portal and he has presentation template, logic tier template and database template. In the present situation, the user had to provision Vm from each template and then do the configuration so that they can logically act as one service stack. He has to create a network (deployVR) and then he has to deploy multiple instances from each template and then later configure them to act as one solution. 
+This idea will help cloud admin/user to ease most of the above tedious tasks with an api call. We can introduce a new api called deployStack, which can take the argument such as template ids and count of instances from each template id, network offering id and rollback (true/false).
+deployStack api will perform the actions to validate the availability of resources depending of the requests. If there are resources, then it will first take care of implementing the network for this service stack, Once the network is ready then it will start creating the instances from each templates with the count param.
+Example, deployStack command receives templateid=1&count=3&templateid=2&count=2&templateid=3&count=1&networkofferingid=10&rollback=true
+CloudStack will look at all the params, first it will deploy a network (VR) using the networkofferingid 10 and then creates 3 instances from template id 1 and 2 instances from template id 2 and 1 instance from template id 3. All these instances will be running in the newly created network. And there will be an UUID for this stack which is used to manage later.
+For each operation, the result will get appended to the final job. If at any point of time if any of the operation fails, then it will check the rollback flag(true/false) if TRUE then it will rollback all the actions it had performed ( deleteing the VM’s, deleting the VR, Unimplement the network and clean up all the resources used). If FALSE, then it will not do clean up and send out a job result with fail and show the entire operations which are completed and failed one with the reason. From this point Admin/User will take care of what need to be done.
+Once the Job is successful then user will have his entire stack ready for configure and use his solution.
+If the Admin/User wants to delete this stack, he will just give the stack id then CS will take care of cleaning up entire resources which is created as part of deployStack.
+This will be a great helpful to cloud Admin/User.
+"	</td>
+    </tr>
+    <tr>
+        <td>	Designing A CloudStack Cloud	</td>
+        <td>	Geoff Higginbottom	</td>
+        <td>	Geoff Higginbottom is CTO of ShapeBlue, the strategic cloud consultancy. Geoff spends most of his time designing private & public cloud infrastructures for telco’s, ISP’s and enterprises based on CloudStack. Geoff has presented talks and participated in Panel discussions at both of the previous two CCC events and has been well received on every occasion. Geoff is also a regular talker at the European CloudStack User Group and has developed and delivered various CloudStack Training Courses.	</td>
+        <td>	: Geoff will walk the attendees through the process of designing a CloudStack infrastructure. By drawing on his significant experience of designing and building both Public and Private Clouds, Geoff will highlight the various design considerations which should be considered when building a CloudStack Infrastructure. Geoff will call upon real world examples showing different and varied designs and explaining why each design was developed and implemented.	</td>
+    </tr>
+    <tr>
+        <td>	Virtual Private Clouds	</td>
+        <td>	Geoff Higginbottom	</td>
+        <td>	Geoff Higginbottom is CTO of ShapeBlue, the strategic cloud consultancy. Geoff spends most of his time designing private & public cloud infrastructures for telco’s, ISP’s and enterprises based on CloudStack. Geoff has presented talks and participated in Panel discussions at both of the previous two CCC events and has been well received on every occasion. Geoff is also a regular talker at the European CloudStack User Group and has developed and delivered various CloudStack Training Courses.	</td>
+        <td>	"Geoff will delve into the Virtual Private Clouds functionality, explaining what the features are and how to configure and use them. The various enhancements delivered with the 4.2 release of CloudStack will also be highlighted.
+Note: Geoff agreed at the last minute to ‘assist’ with a VPC talk at the last minute at the previous CCC and unfortunately the main presenter had not prepared any material so the talk did not realise its full potential. VPCs are complex beasts and generate a lot of questions and some confusion within the community. Geoff recently delivered a talk on CloudStack Networking which included a detailed look at VPCs and Geoff would welcome the opportunity to present this material at CCC for the benefit of the community.
+"	</td>
+    </tr>
+    <tr>
+        <td>	Introduction to CloudStack Networking	</td>
+        <td>	Geoff Higginbottom	</td>
+        <td>	Geoff Higginbottom is CTO of ShapeBlue, the strategic cloud consultancy. Geoff spends most of his time designing private & public cloud infrastructures for telco’s, ISP’s and enterprises based on CloudStack. Geoff has presented talks and participated in Panel discussions at both of the previous two CCC events and has been well received on every occasion. Geoff is also a regular talker at the European CloudStack User Group and has developed and delivered various CloudStack Training Courses.	</td>
+        <td>	"Geoff will give an overview of the various Networking models available within CloudStack, explaining the key features and benefits of each. Geoff will call upon his significant real world experience designing both Public and Enterprise clouds to help explain how an organisation could design and implement CloudStack Networking. Geoff will finish with an introduction to the various SDN solutions.
+Note: Geoff originally delivered this presentation at the Vegas CCC in 2012 and received a significant amount of very positive feedback. This will be an updated version of this presentation, which will include all relevant 4.2 features, and more real world examples.
+"	</td>
+    </tr>
+    <tr>
+        <td>	Secure Cloud With Cisco Nexus 1000v Switch, Cisco VNMC, Cisco ASA 1000v Firewall Powered by Apache CloudStack	</td>
+        <td>	Sailaja Mada	</td>
+        <td>	Sailaja Mada, Apache CloudStack Committer , Sr Software Test Engineer II , Citrix R&D India Pvt ltd, Bangalore , India. Sailaja Mada has 8.7 years of experience in the Quality Engineering of SaaS , IaaS products for all the Testing Quality factors including Functional, Reliability, Scalability , Performance and the products are into the domain Identity and Access Management , Apache CloudStack. Currently working as a Senior Quality Engineer with Citrix CloudPlatform and her contributions are towards CloudStack Infra services with VMWare dvSwitch , Cisco Technologies such as Cisco Nexus 1000v , Cisco ASA 1000v Firewall , Cisco VNMC . Sailaja holds MS in Software Engineering from BITS,Pilani and Bachelors in Computer Science and Engineering.	</td>
+        <td>	"CloudStack release 4.2 is enabled to configure and manage VMware infra (Public and Guest Traffic ) with Nexus 1000v. Nexus 1000v is required to work with Cisco ASA 1000v Firewall and Cisco Virtual Network Management Center integrations into CloudStack. 
+Cisco Nexus 1000V is a software switch implementation that provides an extensible architectural platform for virtual machines and cloud networking. Cisco VNMC provides centralized multi-device and policy management for Cisco network virtual services. 
+Apache CloudStack Interacts with Cisco VNMC thru XML APIs to configure Firewall , Source Nat, Static Nat , Port Forwarding services with Cisco ASA 1000v firewall. 
+This session is to help Cloud admins / Users to configure and Manage secure clouds Powered by Apache Cloudstack which includes Nexus 1000v, Cisco ASA 1000v Firewall
+Contents of the Presentation Slides would be :
+• Briefing about Nexus, VNMC , ASA integrations and usecases 
+• Overview of implementation 
+• Cloudstack Usecases
+• Configuration and things to remember for Nexus/Cisco VNMC/ASA 1000v firewall 
+• Integration steps with Cloudstack 
+• Secure Access to the guest VM 
+• Managing the network services rules from Cloudstack 
+"	</td>
+    </tr>
+    <tr>
+        <td>	Production Network Manipulation & Schema Changes (4.1.1+)	</td>
+        <td>	Kelcey Damage	</td>
+        <td>	Kelcey Damage is the ISA - Cloud Computing & Prototype Systems of Backbone Technology and Backbone DataVault. Kelcey has been working with CloudStack for almost two years, as both a contributer and committer, focusing primarily on user support, on-ramping, and evangelism. He has been a participant in both previous CloudStack Collaboration Conferences, and represented Apache CloudStack at other industry events. Currently he is developing guest/infrastructure management and healing systems for Apache CloudStack IaaS deployments.	</td>
+        <td>	"Kelcey will discuss setting up and running Apache CloudStack with KVM hypervisors, and the recent schema change in 4.1.1. He will explain how to conduct an upgrade to your networking schema on live/running production clouds, as well as caveats that have been introduced with the new schema. The talk will include expanding new and existing clusters, and adding new NICs to hosts in production. Much of this lecture is on practical real-time manipulation of CloudStacks networking. Time permitting Kelcey will provide an automation tool for conducting these schema modifications as well as new-host 1-click networking configuration to ensure error-free KVM host addition. This talk focuses on the following key technologies:
+• Apache CloudStack 4.1.1+
+• Centos 6.4+
+• VLANs
+• Bonds
+• Bridges
+• Python
+• Libvirt 0.10.2+
+• KVM
+This is a practical lecture with the intent of expanding Apache CloudStack users existing toolkits.
+"	</td>
+    </tr>
+    <tr>
+        <td>	NetApp’s Enterprise Storage Plug-In Implementation: A Complete Walkthrough	</td>
+        <td>	David La Motta	</td>
+        <td>	"David La Motta is a Technical Marketing Engineer at NetApp, who has been involved with CloudStack since late 2012. He is the architect for the NetApp-CloudStack integration, with over 17 years of software engineering experience at various companies. David has participated in and led similar integration products at NetApp, albeit directly at the hypervisor level: initially with VMware's vSphere, and later on exclusively with Citrix' XenServer; these prior integrations (initially called Rapid Cloning Utility and later on Virtual Storage Console for vSphere / XenServer, respectively) and the CloudStack effort share a set of similarities at their core; as of late, David also architected a Data ONTAP PowerShell alternative, which is a cross-platform scripting and programmatic API that leverages Groovy and Java. He is based out of RTP, NC.
+Chris Suich is a Software Engineer at NetApp and is the lead developer for the NetApp-CloudStack integration project. He joined NetApp in April of 2013 after graduating from North Carolina State University with a master's degree in Computer Science. Chris has a background in mobile application and web development, which he acquired at various companies throughout his college career. At NetApp, he initially contributed to the NetApp Recovery Manager for Citrix ShareFile and, along with leading the development effort for NetApp’s CloudStack integration, he has also contributed code to the Apache CloudStack project. Chris is based out of NetApp's RTP office.
+"	</td>
+        <td>	"NetApp’s key goal is to provide enterprise-class solutions to all of its customers, a wide variety of which use Apache CloudStack (ACS) for building their cloud infrastructures. NetApp’s Virtual Storage Console (VSC) for CloudStack—c(urrently in development—a) allows customers to fully orchestrate key storage management tasks by extending and exposing a core set of functionality to cloud administrators. The integration includes operations such as provisioning of primary and secondary storage, virtual machine backup and recovery, storage efficiency, storage analytics, and more. This plug-in is distinguished from the traditional ACS workflows by applying NetApp best practices to provisioning operations, and by offloading backup and recovery to the storage tier, resulting in operational simplicity and scalability.
+In this talk, the presenters will walk through 'VSC for CloudStack’ss features, architecture, and design decisions. Third party developers should gain an understanding of what it takes to write and end-to-end (UI and API) ACS plug-in; the ACS development community will be given the perspective of a third party developer finally, customers and partners will be able to understand how to best leverage the plug-in and its capabilities to simplify their cloud operations.
+"	</td>
+    </tr>
+    <tr>
+        <td>	Odac - Improving the Operational User Experience for Large Scale Clouds	</td>
+        <td>	Chip Childers	</td>
+        <td>	You know Chip	</td>
+        <td>	"Over the last 6 months, I've been thinking about the Apache CloudStack UI's experience for operators, and although it's great in small environments, I believe that there could be significant improvement in the way that operators review and manage larger clouds. The layout of the native CloudStack UI is more focused on a graphical experience that helps explain the internal structure to the viewer. With a larger environment, the operator is (most likely) less interested in visually seeing relationships between the various infrastructure bits. What they want, is a dashboard view into their capacity (all available aspects), with drill-downs. They also need a much cleaner way to review the event stream that's generated by the system. To those ends, I started working on a project to create a prototype that might be one way to meet these needs.
+This talk will review the current state of the project I've named ""Odac"", explaining both the technical and user experience design decisions I've made for the prototype. I'll also provide a demo of the latest and greatest version, including a view of how Odac will look for an environment with 20,000 hosts in a single zone.
+More information about this early stage project can be found here:
+http://chipchilders.github.io/odac/
+"	</td>
+    </tr>
+    <tr>
+        <td>	Guaranteeing Storage Performance In Your Cloud	</td>
+        <td>	Mike Tutkowski	</td>
+        <td>		</td>
+        <td>	This session will talk about the challenges of guaranteeing storage performance in a cloud and how by leveraging the latest enhancements to CloudStack with SolidFire, storage administrators can deliver consistent, repeatable performance to 10s, 100s or 1,000s of application workloads in parallel. We’ll review the CloudStack enhancements in detail, outline the management benefits they provide and discuss common go to market approaches.	</td>
+    </tr>
+    <tr>
+        <td>	Tiering Storage to Support Multiple Workloads	</td>
+        <td>	Mike Tutkowski	</td>
+        <td>		</td>
+        <td>	When designing a cloud to handle multiple workloads, the architect is inevitably faced with a decision on whether or not they should support multiple storage tiers, how many tiers they should have and which workloads each tier will support. In this session we will debate the pros and cons of having multiple storage tiers, how the number of tiers impacts the business and make recommendations on how to approach the design to support multiple workloads.	</td>
+    </tr>
+    <tr>
+        <td>	Key Design Considerations for Your Cloud Storage	</td>
+        <td>	Mike Tutkowski	</td>
+        <td>		</td>
+        <td>	"Whether you are a service provider looking to deliver cloud services or an enterprise looking to build a shared infrastructure/private cloud, the topic of storage is likely one of your top design challenges. There are quite a few approaches to building cloud storage and numerous point solutions to consider. So, where do you start and what questions should you be asking? In this session we will cover architectural topics including:
+Accommodating multiple workloads
+Building a scalable infrastructure
+Data protection strategy impact on overall design Monitoring and management needs
+"	</td>
+    </tr>
 </table>
 </div>
