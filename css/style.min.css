@@ -11,7 +11,9 @@ body{ line-height: 1; }
 ol,ul{ list-style: none; }
 blockquote,q{ quotes: none; }
 blockquote:before,blockquote:after,q:before,q:after{ content: ''; content: none; }
-table{ border-collapse: collapse; border-spacing: 0; }
+table{
+	border-collapse: collapse;
+	border-spacing: 0; }
 body{
 	background: #fff;
 	font: 14px/21px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -24,13 +26,14 @@ td{
 	margin-top: 15px;
 	margin-left: 15px;
 	border-bottom: 1px solid #333333;
-	padding: 6px 16px;
-	font-size: 62.5%;
+	padding: 8px 8px;
+	font-size: 72.5%;
 }
 th{
-	background-color:#00c6ff;
+	background-color:#5bc0de;
 	text-align:left;
 	margin-right: 5px;
+	padding: 8px 8px;
 }
 h1,h2,h3,h4,h5,h6{
 	color: #181818;
