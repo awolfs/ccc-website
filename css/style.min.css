@@ -13,7 +13,9 @@ blockquote,q{ quotes: none; }
 blockquote:before,blockquote:after,q:before,q:after{ content: ''; content: none; }
 table{
 	border-collapse: collapse;
-	border-spacing: 0; }
+	border-spacing: 0;
+	font: 13px/21px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
 body{
 	background: #fff;
 	font: 14px/21px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -27,7 +29,6 @@ td{
 	margin-left: 15px;
 	border-bottom: 1px solid #68afda;
 	padding: 8px 8px;
-	font: 14px/21px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 th{
 	background-color:#68afda;
