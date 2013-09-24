@@ -17,16 +17,16 @@
 <div class="sixteen columns alpha">
 <table border="1" align="left">
     <tr>
-        <th width="140px">Title</th>
-        <th width="140px">Speaker</th>
-        <th width="335px">Bio</th>
-        <th width="335px">Abstract</th>
+        <th>Title</th>
+        <th>Speaker</th>
+        <th>Bio</th>
+        <th>Abstract</th>
     </tr>
     <tr>
-        <td>The Goat and Silo: What an Old Calculus Problem Can Teach Us about Instilling the Culture Required for Cloud</td>
-        <td>Michael Ducy</td>
-        <td>Michael Ducy currently works as an Enterprise Architect for Opscode focused on designing and implementing automation solutions for customer’s Cloud, IT Automation, and Continuous Delivery needs. Prior to Opscode, Michael worked at CompuCom, helping with the architecture and design of CompuCom’s Cloud portfolio. Michael has held other roles as a Cloud Architect, Performance and Capacity Planner, Linux Systems Engineer, Instructor of IT courses, and Private Consultant for companies such as enStratus, BMC Software, and Orbitz Worldwide. After graduating from the University of Missouri St. Louis with a degree in Computer Science, Michael completed his Masters degree in Computer Science at the University of Chicago. More recently Michael completed his MBA at the Fisher College of Business at The Ohio State University.</td>
-        <td>We may know the Goat and Silo problem as a common calculus mathematical problem, but Goats (scape goats) and Silo (organizational silos) problems also plague IT organizations.  How can we turn Goats and Silos into assets that can help in implementing a culture supportive of Cloud, DevOps, and the next generation of IT paradigms. This talk will build on Organizational Management philosophies, as well as the philosophies of Lean and Agile.<br></td>
+        <td width="140">The Goat and Silo: What an Old Calculus Problem Can Teach Us about Instilling the Culture Required for Cloud</td>
+        <td width="140">Michael Ducy</td>
+        <td width="335">Michael Ducy currently works as an Enterprise Architect for Opscode focused on designing and implementing automation solutions for customer’s Cloud, IT Automation, and Continuous Delivery needs. Prior to Opscode, Michael worked at CompuCom, helping with the architecture and design of CompuCom’s Cloud portfolio. Michael has held other roles as a Cloud Architect, Performance and Capacity Planner, Linux Systems Engineer, Instructor of IT courses, and Private Consultant for companies such as enStratus, BMC Software, and Orbitz Worldwide. After graduating from the University of Missouri St. Louis with a degree in Computer Science, Michael completed his Masters degree in Computer Science at the University of Chicago. More recently Michael completed his MBA at the Fisher College of Business at The Ohio State University.</td>
+        <td width="335">We may know the Goat and Silo problem as a common calculus mathematical problem, but Goats (scape goats) and Silo (organizational silos) problems also plague IT organizations.  How can we turn Goats and Silos into assets that can help in implementing a culture supportive of Cloud, DevOps, and the next generation of IT paradigms. This talk will build on Organizational Management philosophies, as well as the philosophies of Lean and Agile.<br></td>
     </tr>
     <tr>
         <td>Fault tolerant and scalable CloudStack deployment using Regions</td>
@@ -138,7 +138,7 @@ He is extremely passionate about technology and his current interests include Li
 Use Case: Suppose cloud admin/user wants to deploy a web service portal and he has presentation template, logic tier template and database template. In the present situation, the user had to provision Vm from each template and then do the configuration so that they can logically act as one service stack. He has to create a network (deployVR) and then he has to deploy multiple instances from each template and then later configure them to act as one solution. 
 This idea will help cloud admin/user to ease most of the above tedious tasks with an api call. We can introduce a new api called deployStack, which can take the argument such as template ids and count of instances from each template id, network offering id and rollback (true/false).
 deployStack api will perform the actions to validate the availability of resources depending of the requests. If there are resources, then it will first take care of implementing the network for this service stack, Once the network is ready then it will start creating the instances from each templates with the count param.
-Example, deployStack command receives templateid=1&count=3&templateid=2&count=2&templateid=3&count=1&networkofferingid=10&rollback=true
+Example, deployStack command receives templateid=1&count=3&templateid=2&count=2<br/>&templateid=3&count=1&networkofferingid=10&rollback=true
 CloudStack will look at all the params, first it will deploy a network (VR) using the networkofferingid 10 and then creates 3 instances from template id 1 and 2 instances from template id 2 and 1 instance from template id 3. All these instances will be running in the newly created network. And there will be an UUID for this stack which is used to manage later.
 For each operation, the result will get appended to the final job. If at any point of time if any of the operation fails, then it will check the rollback flag(true/false) if TRUE then it will rollback all the actions it had performed ( deleteing the VM’s, deleting the VR, Unimplement the network and clean up all the resources used). If FALSE, then it will not do clean up and send out a job result with fail and show the entire operations which are completed and failed one with the reason. From this point Admin/User will take care of what need to be done.
 Once the Job is successful then user will have his entire stack ready for configure and use his solution.
