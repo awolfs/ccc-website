@@ -25,9 +25,9 @@ td{
 	text-align:left;
 	margin-top: 15px;
 	margin-left: 15px;
-	border-bottom: 1px solid #333333;
+	border-bottom: 1px solid #68afda;
 	padding: 8px 8px;
-	font-size: 72.5%;
+	font: 14px/21px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 th{
 	background-color:#68afda;
