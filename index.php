@@ -64,7 +64,7 @@ $gold = array(
 'NetApp' => 'http://www.netapp.com',
 'Cloudsoft' => 'http://www.cloudsoftcorp.com/',
 'Nexenta' => 'http://www.nexenta.com',
-'Ikoula' => 'http://express.ikoula.co.uk/'
+'Ikoula' => 'http://express.ikoula.co.uk/cloudstack'
 );
 $gold2 = array(
 'Leaseweb' => 'http://www.leaseweb.com/',
