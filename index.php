@@ -3,7 +3,7 @@ $page = substr($_SERVER['REQUEST_URI'], 1);
 $page = (!empty($page)) ? $page : 'home';
 $menu = array(
 'Home',
-'Event' => array('Registration'),
+'Event' => array('Hotels', 'Registration'),
 'Sponsors',
 'Call for papers',
 'Contact'
