@@ -3,6 +3,27 @@ require_once('functions.php');
 
 $page = substr($_SERVER['REQUEST_URI'], 1);
 $page = (!empty($page)) ? $page : 'home';
+<<<<<<< HEAD
+=======
+$menu = array(
+'Home',
+'Event' => array('Hotels', 'Registration'),
+'Sponsors',
+'Call for papers',
+'Contact'
+);
+
+function sponsorbar($type, $array)
+{
+$list = '<div class="sponsorsBox '.strtolower($type).'"><span>'.$type.'</span><ul>';
+foreach($array as $brand => $url)
+{
+$list .= '<li><a href="'.$url.'" title="'.$brand.'" alt="'.$brand.'" target="_blank"><img src="/img/sponsors/'.strtolower(str_replace(' ', '', $brand)).'.png" alt="'.$brand.'" title="'.$brand.'" /></a></li>';
+}
+$list .= '</ul></div>';
+return $list;
+}
+>>>>>>> 26cd57157e463d1fd9d7f48ceb0a5686e48ad914
 
 if(strpos($page, '/') !== false)
 {
