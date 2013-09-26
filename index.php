@@ -3,27 +3,6 @@ require_once('functions.php');
 
 $page = substr($_SERVER['REQUEST_URI'], 1);
 $page = (!empty($page)) ? $page : 'home';
-<<<<<<< HEAD
-=======
-$menu = array(
-'Home',
-'Event' => array('Hotels', 'Registration'),
-'Sponsors',
-'Call for papers',
-'Contact'
-);
-
-function sponsorbar($type, $array)
-{
-$list = '<div class="sponsorsBox '.strtolower($type).'"><span>'.$type.'</span><ul>';
-foreach($array as $brand => $url)
-{
-$list .= '<li><a href="'.$url.'" title="'.$brand.'" alt="'.$brand.'" target="_blank"><img src="/img/sponsors/'.strtolower(str_replace(' ', '', $brand)).'.png" alt="'.$brand.'" title="'.$brand.'" /></a></li>';
-}
-$list .= '</ul></div>';
-return $list;
-}
->>>>>>> 26cd57157e463d1fd9d7f48ceb0a5686e48ad914
 
 if(strpos($page, '/') !== false)
 {
@@ -62,11 +41,11 @@ $menu = '<div class="sixteen columns">
 	<meta name="author" content="De Graaf & Partners Communications" />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width" />
-	<link rel="shortcut icon" href="/img/favicon.ico" />
-	<link rel="apple-touch-icon" href="/img/appletouch/icon.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/appletouch/57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/appletouch/72x72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/img/appletouch/114x114.png" />
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="apple-touch-icon" href="/images/appletouch/icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/appletouch/57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/appletouch/72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/appletouch/114x114.png" />
 	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
