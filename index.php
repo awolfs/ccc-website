@@ -16,8 +16,9 @@ $menu = '<div class="sixteen columns">
 					<li><a href="/home" title="Home" alt="Home"'; $menu .= ($page === 'home') ? ' class="active"' : ''; $menu .= '>Home</a></li>
 					<li class="top"><a href="/event" title="Event" alt="Event"'; $menu .= ($page === 'event') ? ' class="active"' : ''; $menu .= '>Event</a>
 						<ul>
-							<li><a href="/event/registration" title="Registration" alt="Registration"'; $menu .= ($page === 'registration') ? ' class="active"' : ''; $menu .= '>Registration</a>
-							<li><a href="/event/hotels" title="Hotels" alt="Hotels"'; $menu .= ($page === 'hotels') ? ' class="active"' : ''; $menu .= '>Hotels</a>
+							<li><a href="/event/CloudStack-CIO-event" title="CloudStack CIO event" alt="CloudStack CIO event"'; $menu .= ($page === 'CloudStack-CIO-event') ? ' class="active"' : ''; $menu .= '>CloudStack CIO event</a></li>
+							<li><a href="/event/registration" title="Registration" alt="Registration"'; $menu .= ($page === 'registration') ? ' class="active"' : ''; $menu .= '>Registration</a></li>
+							<li><a href="/event/hotels" title="Hotels" alt="Hotels"'; $menu .= ($page === 'hotels') ? ' class="active"' : ''; $menu .= '>Hotels</a></li>
 						</ul>
 					</li>
 					<li><a href="/sponsors" title="Sponsors" alt="Sponsors"'; $menu .= ($page === 'sponsors') ? ' class="active"' : ''; $menu .= '>Sponsors</a></li>
