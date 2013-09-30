@@ -139,7 +139,7 @@ $menu = '<div class="sixteen columns">
 			require_once('./pages/404.phtml');
 		}
 		?>
-		<div class="sixteen columns"><?php echo ($page !== 'home') ? '<br class="clear">'.sponsorblock('Sponsors') : ''; ?></div>
+		<div class="sixteen columns"><br class="clear"><?php echo sponsorblock('Sponsors'); ?></div>
 	</section>
 	<?php
 	}
