@@ -17,15 +17,16 @@ function sponsorblock($title = null)
 		'Citrix' => 'http://www.citrix.com/'
 	);
 	$platinum = array(
+		'Juniper' => 'http://www.juniper.net'
 	);
+
 	$gold = array(
 		'Shape Blue' => 'http://www.shapeblue.com/',
 		'NetApp' => 'http://www.netapp.com',
 		'Cloudsoft' => 'http://www.cloudsoftcorp.com/',
 		'Nexenta' => 'http://www.nexenta.com',
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
-		'Leaseweb' => 'http://www.leaseweb.com/',
-		'Juniper' => 'http://www.juniper.net'
+		'Leaseweb' => 'http://www.leaseweb.com/'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
