@@ -24,7 +24,8 @@ function sponsorblock($title = null)
 		'Cloudsoft' => 'http://www.cloudsoftcorp.com/',
 		'Nexenta' => 'http://www.nexenta.com',
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
-		'Leaseweb' => 'http://www.leaseweb.com/'
+		'Leaseweb' => 'http://www.leaseweb.com/',
+		'Juniper' => 'http://www.juniper.net'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
