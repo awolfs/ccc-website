@@ -21,6 +21,12 @@ $menu = '<div class="sixteen columns">
 							<li><a href="/event/hotels" title="Hotels" alt="Hotels"'; $menu .= ($page === 'hotels') ? ' class="active"' : ''; $menu .= '>Hotels</a></li>
 						</ul>
 					</li>
+                                        <li class="top"><a href="/schedule" title="Schedule" alt="Schedule"'; $menu .= ($page === 'schedule') ? ' class="active"' : ''; $menu .= '>Schedule</a>
+                                        	<ul>
+							<li><a href="/schedule/Wednesday" title="Hackday on Wednesday" alt="Hackday on Wednesday"'; $menu .= ($page === 'schedulewed') ? ' class="active"' : ''; $menu .= '>Hackday on Wednesday</a></li>
+							<li><a href="/schedule/Thursday" title="Conference Schedule Thursday" alt="Conference Schedule Thursday"'; $menu .= ($page === 'schedulethur') ? ' class="active"' : ''; $menu .= '>Conference Schedule Thursday</a></li>
+							<li><a href="/schedule/Friday" title="Conference Schedule Friday" alt="Conference Schedule Friday"'; $menu .= ($page === 'schedulefri') ? ' class="active"' : ''; $menu .= '>Conference Schedule Friday</a></li>
+						</ul>
 					<li><a href="/sponsors" title="Sponsors" alt="Sponsors"'; $menu .= ($page === 'sponsors') ? ' class="active"' : ''; $menu .= '>Sponsors</a></li>
 					<li><a href="/call-for-papers" title="Call for Papers" alt="Call for Papers" class="focus"'; $menu .= ($page === 'call-for-papers') ? ' class="active"' : ''; $menu .= '>Call for Papers</a></li>
 					<li><a href="/contact" title="Contact" alt="Contact"'; $menu .= ($page === 'contact') ? ' class="active"' : ''; $menu .= '>Contact</a></li>
