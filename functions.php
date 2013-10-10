@@ -17,7 +17,8 @@ function sponsorblock($title = null)
 		'Citrix' => 'http://www.citrix.com/'
 	);
 	$platinum = array(
-		'Juniper' => 'http://www.juniper.net'
+		'Juniper' => 'http://www.juniper.net',
+		'Sungard' => 'http://www.sungard.com'
 	);
 
 	$gold = array(
