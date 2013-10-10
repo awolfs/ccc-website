@@ -32,7 +32,7 @@ $menu = '<div class="sixteen columns">
                                         
                                         <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
                                                 <ul>
-                                                        <li><a href="/press" title="Press info" alt="Press info"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press Generic</a></li>
+                                                        <li><a href="/press" title="Press info" alt="Press info"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press info</a></li>
                                                         <li><a href="/press-releases" title="Press releases" alt="Press releases"'; $menu .= ($page === 'press-releases') ? ' class="active"' : ''; $menu .= '>Press Releases</a></li>
                                                 </ul>
 					<li><a href="/contact" title="Contact" alt="Contact"'; $menu .= ($page === 'contact') ? ' class="active"' : ''; $menu .= '>Contact</a></li>
