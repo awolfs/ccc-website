@@ -29,6 +29,12 @@ $menu = '<div class="sixteen columns">
 						</ul>
 					<li><a href="/sponsors" title="Sponsors" alt="Sponsors"'; $menu .= ($page === 'sponsors') ? ' class="active"' : ''; $menu .= '>Sponsors</a></li>
 					<li><a href="/call-for-papers" title="Call for Papers" alt="Call for Papers" class="focus"'; $menu .= ($page === 'call-for-papers') ? ' class="active"' : ''; $menu .= '>Call for Papers</a></li>
+                                        
+                                        <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
+                                                <ul>
+                                                        <li><a href="/press-generic" title="Press generic info" alt="Press generic info"'; $menu .= ($page === 'press-generic') ? ' class="active"' : ''; $menu .= '>Press Generic</a></li>
+                                                        <li><a href="/press-releases" title="Press releases" alt="Press releases"'; $menu .= ($page === 'press-releases') ? ' class="active"' : ''; $menu .= '>Press Releases</a></li>
+                                                </ul>
 					<li><a href="/contact" title="Contact" alt="Contact"'; $menu .= ($page === 'contact') ? ' class="active"' : ''; $menu .= '>Contact</a></li>
 				</ul>
 			</nav>
