@@ -23,9 +23,9 @@ $menu = '<div class="sixteen columns">
 					</li>
                                         <li class="top"><a href="/schedule" title="Schedule" alt="Schedule"'; $menu .= ($page === 'schedule') ? ' class="active"' : ''; $menu .= '>Schedule</a>
                                         	<ul>
-							<li><a href="/schedule/schedulewed" title="Hackday on Wednesday" alt="Hackday on Wednesday"'; $menu .= ($page === 'schedulewed') ? ' class="active"' : ''; $menu .= '>Hackday on Wednesday</a></li>
-							<li><a href="/schedule/schedulethur" title="Conference Schedule Thursday" alt="Conference Schedule Thursday"'; $menu .= ($page === 'schedulethur') ? ' class="active"' : ''; $menu .= '>Conference Schedule Thursday</a></li>
-							<li><a href="/schedule/schedulefri" title="Conference Schedule Friday" alt="Conference Schedule Friday"'; $menu .= ($page === 'schedulefri') ? ' class="active"' : ''; $menu .= '>Conference Schedule Friday</a></li>
+							<li><a href="/schedule/wednesday" title="Hackday on Wednesday" alt="Hackday on Wednesday"'; $menu .= ($page === 'wednesday') ? ' class="active"' : ''; $menu .= '>Hackday on Wednesday</a></li>
+							<li><a href="/schedule/thursday" title="Conference Schedule Thursday" alt="Conference Schedule Thursday"'; $menu .= ($page === 'thursday') ? ' class="active"' : ''; $menu .= '>Conference Schedule Thursday</a></li>
+							<li><a href="/schedule/friday" title="Conference Schedule Friday" alt="Conference Schedule Friday"'; $menu .= ($page === 'friday') ? ' class="active"' : ''; $menu .= '>Conference Schedule Friday</a></li>
 						</ul>
 					<li><a href="/sponsors" title="Sponsors" alt="Sponsors"'; $menu .= ($page === 'sponsors') ? ' class="active"' : ''; $menu .= '>Sponsors</a></li>
 					<li><a href="/call-for-papers" title="Call for Papers" alt="Call for Papers" class="focus"'; $menu .= ($page === 'call-for-papers') ? ' class="active"' : ''; $menu .= '>Call for Papers</a></li>
@@ -127,27 +127,40 @@ $menu = '<div class="sixteen columns">
 		</div>
 	</header>
 	<?php
-	if($page === 'registration')
+	switch($page)
 	{
-		echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Registration</span></h1></div></div></div><iframe src="http://www.eventbrite.com/event/7944350767?ref=eweb" frameborder="0" height="2600" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
-	}
-	else
-	{
-	?>
-	<section class="container">	
-		<?php
-		if(is_file('./pages/'.$page.'.phtml'))
-		{
-			require_once('./pages/'.$page.'.phtml');
-		}
-		else
-		{
-			require_once('./pages/404.phtml');
-		}
-		?>
-		<div class="sixteen columns"><br class="clear"><?php echo sponsorblock('Sponsors'); ?></div>
-	</section>
-	<?php
+		case 'registration':
+			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Registration</span></h1></div></div></div><iframe src="http://www.eventbrite.com/event/7944350767?ref=eweb" frameborder="0" height="2600" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
+		break;
+		case 'schedule':
+			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Wednesday 20th Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-20&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe><br/><h1><span>Schedule - Thursday 21st Talks, Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-21&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe><br/><h1><span>Schedule - Friday 22nd Talks, Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-22&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
+		break;
+		case 'wednesday':
+			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Wednesday 20th Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-20&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
+		break;
+		case 'thursday':
+			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Thursday 21st Talks, Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-21&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
+		break;
+		case 'friday':
+			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Friday 22nd Talks, Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-22&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
+		break;
+		default:
+			?>
+			<section class="container">	
+				<?php
+				if(is_file('./pages/'.$page.'.phtml'))
+				{
+					require_once('./pages/'.$page.'.phtml');
+				}
+				else
+				{
+					require_once('./pages/404.phtml');
+				}
+				?>
+				<div class="sixteen columns"><br class="clear"><?php echo sponsorblock('Sponsors'); ?></div>
+			</section>
+			<?php
+		break;
 	}
 	?>
 	<footer>
