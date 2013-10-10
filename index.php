@@ -28,7 +28,7 @@ $menu = '<div class="sixteen columns">
 							<li><a href="/schedule/friday" title="Conference Schedule Friday" alt="Conference Schedule Friday"'; $menu .= ($page === 'friday') ? ' class="active"' : ''; $menu .= '>Conference Schedule Friday</a></li>
 						</ul>
 					<li><a href="/sponsors" title="Sponsors" alt="Sponsors"'; $menu .= ($page === 'sponsors') ? ' class="active"' : ''; $menu .= '>Sponsors</a></li>
-					<li><a href="/call-for-papers" title="Call for Papers" alt="Call for Papers" class="active"'; $menu .= ($page === 'call-for-papers') ? ' class="active"' : ''; $menu .= '>Call for Papers</a></li>
+					<li><a href="/call-for-papers" title="Call for Papers" alt="Call for Papers"'; $menu .= ($page === 'call-for-papers') ? ' class="active"' : ''; $menu .= '>Call for Papers</a></li>
                                         
                                         <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
                                                 <ul>
