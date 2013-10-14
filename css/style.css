@@ -623,7 +623,6 @@ ol li{
 	}
 	.apache-cloudstack-logo{
 		height: 52px;
-
 		background-image: url('/images/apache-cloudstack-logo.jpg');
 		background-repeat: no-repeat;
 		background-position: center;
@@ -661,15 +660,7 @@ ol li{
 	
 	.large-header-text-right a.register-button{
 		line-height: 2em !important;
-	}
-	
-	.sixteen.columns.green-box{
-		width: 728px;
-	}
-	.green-box .one-third.column{
-		width: 228px
-	}
-	
+	}	
 	nav{
 		margin-top: -17px;
 	}
@@ -789,13 +780,6 @@ ol li{
 	
 	.green-button{
 		margin-bottom: 10px;
-	}
-	
-	.sixteen.columns.green-box{
-		width: 400px;
-	}
-	.green-box .one-third.column{
-		width: 400px
 	}
 	
 	footer,
