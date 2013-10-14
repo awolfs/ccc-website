@@ -220,7 +220,6 @@ h5,
 h6{
 	font-family: 'TelluralBold';
 	color: #035b90;
-	word-wrap: break-word;
 }
 h1{
 	font-size: 2em;
@@ -801,6 +800,21 @@ ol li{
 	footer,
 	footer div.right{
 		text-align: center;
+	}
+	
+	h1:after{
+		display: none;
+	}
+	h1:after {
+		background: none;
+		width: 0;
+		height: 0;
+	}
+	h1 > span {
+		white-space: normal;
+		padding-right: 0px;
+		word-wrap: break-word;
+		line-height: 35px;
 	}
 }
 
