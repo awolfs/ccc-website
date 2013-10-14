@@ -55,7 +55,7 @@ $menu = '<div class="sixteen columns">
 	<meta name="description" content="Cloudstack collaboration conference Europe" />
 	<meta name="author" content="De Graaf & Partners Communications" />
 	<meta name="robots" content="index, follow" />
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="/images/favicon.ico" />
 	<link rel="apple-touch-icon" href="/images/appletouch/icon.png" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/images/appletouch/57x57.png" />
