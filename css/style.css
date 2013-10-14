@@ -790,10 +790,5 @@ ol li{
 
 @media only screen and (max-width: 479px)
 {
-	.sixteen.columns.green-box{
-		width: 280px;
-	}
-	.green-box .one-third.column{
-		width: 280px
-	}
+	
 }
