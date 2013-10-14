@@ -220,6 +220,7 @@ h5,
 h6{
 	font-family: 'TelluralBold';
 	color: #035b90;
+	word-wrap: break-word;
 }
 h1{
 	font-size: 2em;
