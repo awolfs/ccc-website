@@ -660,7 +660,15 @@ ol li{
 	
 	.large-header-text-right a.register-button{
 		line-height: 2em !important;
-	}	
+	}
+	
+	.sixteen.columns.green-box{
+		width: 728px;
+	}
+	.green-box .one-third.column{
+		width: 228px
+	}
+	
 	nav{
 		margin-top: -17px;
 	}
@@ -782,6 +790,13 @@ ol li{
 		margin-bottom: 10px;
 	}
 	
+	.sixteen.columns.green-box{
+		width: 400px;
+	}
+	.green-box .one-third.column{
+		width: 400px
+	}
+	
 	footer,
 	footer div.right{
 		text-align: center;
@@ -790,5 +805,10 @@ ol li{
 
 @media only screen and (max-width: 479px)
 {
-	
+	.sixteen.columns.green-box{
+		width: 280px;
+	}
+	.green-box .one-third.column{
+		width: 280px
+	}
 }
