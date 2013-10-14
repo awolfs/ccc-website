@@ -60,4 +60,128 @@ function sponsorblock($title = null)
 	
 	echo $d.$p.$g.$s.$h.$c;
 }
+
+function scheduleColorScheme()
+{
+	$table = '<table>';
+	
+	$colors = array(
+		'Effectenbeurs' => 'color-one',
+		'Veilingzaal' => 'color-two',
+		'Grote zaal' => 'color-three',
+		'Administratiezaal' => 'color-four',
+		'Beursfoyer' => 'color-five',
+		'Glazen zaal' => 'color-six',
+		'Verweykamer' => 'color-seven',
+		'Berlagezaal' => 'color-eight'
+	);
+	
+	foreach($colors as $space => $color)
+	{
+		$table .= '<tr class="'.$color.'">
+			<td>'.$space.'</td>
+			</td>
+		</tr>';
+	}
+
+	$table .= '</table>';
+	return $table;
+}
+
+function schedule($day)
+{
+	$json = file_get_contents('http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/df4ae374310b53f0.v1.json');
+	$schedule = json_decode($json);
+	$table = '';
+	$titlePlus = '';
+	$speaker = '';
+	$more = '';
+	$abstract = '';
+	$bio = '';
+	
+	switch($day)
+	{
+		case 'wednesday':
+			$session = $schedule->sessions[0]->sessions;
+		break;
+		case 'thursday':
+			$session = $schedule->sessions[1]->sessions;
+		break;
+		case 'friday':
+			$session = $schedule->sessions[2]->sessions;
+		break;
+	}
+	
+	$table = '<table class="schedule">
+		<tr>
+			<th>Time</th>
+			<th>Space</th>
+			<th>Speaker</th>
+		</tr>';
+		
+		foreach($session as $info)
+		{
+			switch($info->space)
+			{
+				case 'Effectenbeurs':
+					$color = ' color-one';
+				break;
+				case 'Veilingzaal':
+					$color = ' color-two';
+				break;
+				case 'Grote zaal':
+					$color = ' color-three';
+				break;
+				case 'Administratiezaal':
+					$color = ' color-four';
+				break;
+				case 'Beursfoyer':
+					$color = ' color-five';
+				break;
+				case 'Glazen zaal':
+					$color = ' color-eight';
+				break;
+				case 'Verweykamer':
+					$color = ' color-seven';
+				break;
+				case 'Berlagezaal':
+					
+					$color = ' color-six';
+				break;
+			}
+			
+			if(isset($info->speakers[0]->name))
+			{
+				$titlePlus = '<div class="more-info-click">+</div>';
+				$speaker = '<span class="speaker"><h2 class="speaker">By <a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" >'.$info->speakers[0]->name.'</a></h2></span>';
+				if($info->speakers[0]->speaker_bio !== '')
+				{ 
+					$bio = '<span class="bio"><h4>Bio</h4>'.$info->speakers[0]->speaker_bio.'</span>';
+				}
+				if($info->abstract !== '')
+				{ 
+					$abstract = '<span class="abstract"><h4>Abstract</h4>'.$info->abstract.'</span>';
+				};
+				$more = '<div class="more-info">
+						<table>
+							<tr>
+								<td><span class="image"><a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" ><img src="'.$info->speakers[0]->image_75.'" /></a></span></td>
+								<td>'.$bio.$abstract.'</td>
+							</tr>
+						</table>
+					</div>';
+			}
+			
+			$table .= '<tr id="'.$info->event_id.'" data-url="'.$info->web_url.'" class="'.$color.'">
+				<td class="time">'.$info->times.'</td>
+				<td class="room">'.$info->space.'</td>
+				<td class="info">
+					<span class="title"><h1 class="title">'.$titlePlus.$info->title.'</h1></span>'.$speaker.
+					$more.'
+				</td>
+			</tr>';
+		}
+	$table .= '</table>';
+	return $table;
+}
 ?>

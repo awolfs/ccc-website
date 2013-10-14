@@ -323,6 +323,9 @@ a.green-button:hover{
 .green{
 	color: #93ce0a;
 }
+.blue{
+	color: #2584ba;
+}
 .italic{
 	font-family: 'TelluralItalic';
 }
@@ -468,6 +471,140 @@ footer{
 }
 footer a{
 	color: #FFF;
+}
+
+table{
+	width: 100%;
+	border-collapse: separate;
+    border-spacing: 0;	
+	border: 1px solid #035b90;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+table th{
+	color: #FFF;
+	background-color: #035b90;
+	font-family: 'TelluralBold';
+	font-size: 1.2em;
+	padding: 8px;
+	border: 1px solid #035b90;
+	border-collapse: collapse;
+}
+table td{
+	border-bottom: 1px solid #035b90;
+	padding:15px;
+	vertical-align: middle;
+	border-right: 1px dotted #CCC;
+}
+table td.time{
+	font-weight: bold;
+}
+table td.room{
+	font-family: 'TelluralBold';
+	font-size: 1.2em;
+}
+table td span.title h1.title{
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	cursor: pointer;
+}
+table td span.speaker h2.speaker{
+	margin-top: 0;
+}
+table td .more-info{
+	display: none;
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 1px dotted #CCC;
+}
+table td .more-info span.image img{
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	vertical-align: top;
+	margin-right: 15px;
+}
+table td .more-info table td{
+	border: none;
+}
+table .info .more-info-click{
+	font-size: 1.6em;
+	vertical-align: top;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	opacity: 0.25;
+	color: #4F4F4F;
+}
+table tr:last-child td{
+	border-bottom: none;
+}
+table .color-one{
+	background-color: #ded3f1;
+}
+table .color-two{
+	background-color: #f1ded4;
+}
+table .color-three{
+	background-color: #f1edd3;
+}
+table .color-four{
+	background-color: #f1d3e6;
+}
+table .color-five{
+	background-color: #d3e6f1;
+}
+table .color-six{
+	background-color: #e9f5ce;
+}
+table .color-seven{
+	background-color: #fffde6;
+}
+table .color-eight{
+	background-color: #facce5;
+}
+
+/*
+table .color-one{
+	background-color: #8d67ce;
+}
+table .color-two{
+	background-color: #c87d51;
+}
+table .color-three{
+	background-color: #c7b851;
+}
+table .color-four{
+	background-color: #cf67a8;
+}
+table .color-five{
+	background-color: #67a9cf;
+}
+table .color-six{
+	background-color: #b3dd54;
+}
+table .color-seven{
+	background-color: #fff24d;
+}
+table .color-eight{
+	background-color: #ee4da5;
+}
+*/
+
+table td .more-info table{
+	border: none;
+}
+table td .more-info table td{
+	padding: 0;
+	vertical-align: top;
+}
+
+ol li{
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
 
 /* TABLET - Tablet Portrait size to standard 960 (devices and browsers) */

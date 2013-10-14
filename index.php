@@ -33,8 +33,8 @@ $menu = '<div class="sixteen columns">
                                         <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
                                                 <ul>
                                                         <li><a href="/press" title="Press info" alt="Press info"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press info</a></li>
-                                                        <li><a href="/pressjour" title="Press info Journalist and Analist" alt="Journalist and Analist"'; $menu .= ($page === 'pressjour') ? ' class="active"' : ''; $menu .= '>Journalist and Analist</a></li>
-                                                        <li><a href="/presspartner" title="Press info Partners and Sponsors" alt="Press info"'; $menu .= ($page === 'presspartner') ? ' class="active"' : ''; $menu .= '>Partners and Sponsors</a></li>
+                                                        <li><a href="/press-journalist-and-analist" title="Press info Journalist and Analist" alt="Journalist and Analist"'; $menu .= ($page === 'press-journalist-and-analist') ? ' class="active"' : ''; $menu .= '>Journalist and Analist</a></li>
+                                                        <li><a href="/press-partners-and-sponsors" title="Press info Partners and Sponsors" alt="Press info"'; $menu .= ($page === 'press-partner-and-sponsors') ? ' class="active"' : ''; $menu .= '>Partners and Sponsors</a></li>
                                                         <li><a href="/press-releases" title="Press releases" alt="Press releases"'; $menu .= ($page === 'press-releases') ? ' class="active"' : ''; $menu .= '>Press Releases</a></li>
                                                 </ul>
 					<li><a href="/contact" title="Contact" alt="Contact"'; $menu .= ($page === 'contact') ? ' class="active"' : ''; $menu .= '>Contact</a></li>
@@ -140,18 +140,6 @@ $menu = '<div class="sixteen columns">
 		case 'registration':
 			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Registration</span></h1></div></div><iframe src="http://www.eventbrite.com/event/7944350767?ref=eweb" frameborder="0" height="2600" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
 		break;
-		case 'schedule':
-			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Wednesday 20th Hackathon, Workshops</span></h1></div></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-20&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe><br/><div class="container"><div class="sixteen columns"><h1><span>Schedule - Thursday 21st Talks, Hackathon, Workshops</span></h1></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-21&fullscreen=1&view=grid" frameborder="0" height="792" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe><br/><div class="container"><div class="sixteen columns"><h1><span>Schedule - Friday 22nd Talks, Hackathon, Workshops</span></h1></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-22&fullscreen=1&view=grid" frameborder="0" height="359" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
-		break;
-		case 'wednesday':
-			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Wednesday 20th Hackathon, Workshops</span></h1></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-20&fullscreen=1&view=grid" frameborder="0" height="690" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
-		break;
-		case 'thursday':
-			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Thursday 21st Talks, Hackathon, Workshops</span></h1></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-21&fullscreen=1&view=grid" frameborder="0" height="792" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
-		break;
-		case 'friday':
-			echo '<section id="body"><div class="container"><div class="sixteen columns"><h1><span>Schedule - Friday 22nd Talks, Hackathon, Workshops</span></h1></div></div><iframe src="http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/?day=nov-22&fullscreen=1&view=grid" frameborder="0" height="359" width="100%" vspace="0" hspace="0" marginheight="0" marginwidth="0" scrolling="auto" allowtransparency="true"></iframe></section>';
-		break;
 		default:
 			?>
 			<section class="container">	
@@ -183,5 +171,7 @@ $menu = '<div class="sixteen columns">
 			</div>
 		</div>
 	</footer>
+	<script src="/js/jquery.1.10.2.js"></script>
+	<script src="/js/init.js"></script>
 </body>
 </html>
