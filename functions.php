@@ -29,6 +29,7 @@ function sponsorblock($title = null)
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
 		'Leaseweb' => 'http://www.leaseweb.com/',
 		'SolidFire' => 'http://solidfire.com/'
+		'greencloud' => 'http://www.greencloud.com/'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
@@ -37,7 +38,7 @@ function sponsorblock($title = null)
 		'2source4' => 'http://www.2source4.nl',
 		'iamsterdam' => 'http://www.iamsterdam.com/',
 		'cloudbees' => 'http://www.cloudbees.com/',
-		'42on' => 'www.42on.com'
+		'42on' => 'http://www.42on.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
