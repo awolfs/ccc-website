@@ -36,7 +36,8 @@ function sponsorblock($title = null)
 		'Elasticsearch' => 'http://www.elasticsearch.com',
 		'2source4' => 'http://www.2source4.nl',
 		'iamsterdam' => 'http://www.iamsterdam.com/',
-		'cloudbees' => 'http://www.cloudbees.com/'
+		'cloudbees' => 'http://www.cloudbees.com/',
+		'42on' => 'www.42on.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
