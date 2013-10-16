@@ -151,7 +151,7 @@ function schedule($day)
 				break;
 			}
 			
-			if(isset($info->speakers[0]->name))
+			if(count($info->speakers) == 1 && isset($info->speakers[0]->name))
 			{
 				$titlePlus = '<div class="more-info-click">+</div>';
 				$speaker = '<span class="speaker"><h2 class="speaker">By <a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" >'.$info->speakers[0]->name.'</a></h2></span>';
