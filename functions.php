@@ -33,7 +33,8 @@ function sponsorblock($title = null)
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
 		'Apalia' => 'http://www.apalia.net/',
-		'Elasticsearch' => 'http://www.elasticsearch.com'
+		'Elasticsearch' => 'http://www.elasticsearch.com',
+		'2source4' => 'http://www.2source4.nl'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
