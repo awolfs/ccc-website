@@ -34,7 +34,8 @@ function sponsorblock($title = null)
 		'Atom 86' => 'http://www.atom86.net/',
 		'Apalia' => 'http://www.apalia.net/',
 		'Elasticsearch' => 'http://www.elasticsearch.com',
-		'2source4' => 'http://www.2source4.nl'
+		'2source4' => 'http://www.2source4.nl',
+		'iamsterdam' => 'http://www.iamsterdam.com/'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
