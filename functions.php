@@ -151,32 +151,70 @@ function schedule($day)
 				break;
 			}
 			
-			if(count($info->speakers) == 1 and isset($info->speakers[0]->name))
+			if(isset($info->speakers[0]->name))
 			{
 				$titlePlus = '<div class="more-info-click">+</div>';
-				$speaker = '<span class="speaker"><h2 class="speaker">By <a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" >'.$info->speakers[0]->name.'</a></h2></span>';
-				if($info->speakers[0]->speaker_bio !== '')
-				{ 
-					$bio = '<span class="bio"><h4>Bio</h4>'.$info->speakers[0]->speaker_bio.'</span>';
+				$speakers = '';
+				$bio = '';
+				$abstract = '';
+				
+				if(count($info->speakers) > 1)
+				{
+					foreach($info->speakers as $key)
+					{
+						$speakers .= '<a href="'.$key->web_url.'" target="_blank" title="'.$key->name.'" alt="'.$key->name.'" >'.$key->name.'</a>, ';
+						$more .= '<tr><td width="90" height="90">
+							<span class="image">
+								<a href="'.$key->web_url.'" target="_blank" title="'.$key->name.'" alt="'.$key->name.'" >
+									<img src="'.$key->image_75.'" />
+								</a>
+							</span>
+						</td>';
+						if(!empty($key->speaker_bio))
+						{ 
+							
+							$bio .= '<span class="bio"><h4>Bio</h4>'.$key->speaker_bio.'</span>';
+						}
+						else
+						{
+							$bio = '';
+						}
+						$more .= '<td><h2 class="speaker">'.$key->name.'</h2>'.$bio.'</td></tr>';
+					}
+					$speaker = substr($speakers, 0, -2);
 				}
-				if($info->abstract !== '')
-				{ 
-					$abstract = '<span class="abstract"><h4>Abstract</h4>'.$info->abstract.'</span>';
-				};
+				else
+				{
+					$speaker = '<a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" >'.$info->speakers[0]->name.'</a>';
+					
+					if($info->speakers[0]->speaker_bio !== '')
+					{ 
+						$bio = '<span class="bio"><h4>Bio</h4>'.$info->speakers[0]->speaker_bio.'</span>';
+					}
+					if($info->abstract !== '')
+					{ 
+						$abstract = '<span class="abstract"><h4>Abstract</h4>'.$info->abstract.'</span>';
+					};
+					
+					$more = '<tr>
+						<td width="90"><span class="image"><a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" ><img src="'.$info->speakers[0]->image_75.'" /></a></span></td>
+						<td>'.$bio.$abstract.'</td>
+					</tr>';
+				}
+				
+				$speaker = '<span class="speaker"><h2 class="speaker">By '.$speaker.'</h2></span>';
 				$more = '<div class="more-info">
-						<table>
-							<tr>
-								<td><span class="image"><a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" ><img src="'.$info->speakers[0]->image_75.'" /></a></span></td>
-								<td>'.$bio.$abstract.'</td>
-							</tr>
-						</table>
-					</div>';
+					<table>
+						'.$more.'
+					</table>
+				</div>';
 			}
-                        else 
-                        {
-                               $speaker = '<span class="speaker"><h2 class="speaker">Multiple Speakers</h2></span>';
-                        }
-			
+			else
+			{
+				$speaker = $info->abstract;
+				$more = '';
+			}
+
 			$table .= '<tr id="'.$info->event_id.'" data-url="'.$info->web_url.'" class="'.$color.'">
 				<td class="time">'.$info->times.'</td>
 				<td class="room">'.$info->space.'</td>
@@ -189,4 +227,5 @@ function schedule($day)
 	$table .= '</table>';
 	return $table;
 }
+
 ?>
