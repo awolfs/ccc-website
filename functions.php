@@ -93,11 +93,6 @@ function schedule($day)
 	$json = file_get_contents('http://lanyrd.com/2013/cloudstack-collaboration-conference-europe/schedule/df4ae374310b53f0.v1.json');
 	$schedule = json_decode($json);
 	$table = '';
-	$titlePlus = '';
-	$speaker = '';
-	$more = '';
-	$abstract = '';
-	$bio = '';
 	
 	switch($day)
 	{
@@ -121,6 +116,12 @@ function schedule($day)
 		
 		foreach($session as $info)
 		{
+ 	                $titlePlus = '';
+	                $speaker = '';
+	                $more = '';
+	                $abstract = '';
+	                $bio = '';
+			
 			switch($info->space)
 			{
 				case 'Effectenbeurs':
