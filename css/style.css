@@ -495,16 +495,18 @@ table th{
 }
 table td{
 	border-bottom: 1px solid #035b90;
-	padding:15px;
-	vertical-align: middle;
+	padding: 15px;
+	vertical-align: top;
 	border-right: 1px dotted #CCC;
 }
 table td.time{
 	font-weight: bold;
+	line-height: 2em;
 }
 table td.room{
 	font-family: 'TelluralBold';
 	font-size: 1.2em;
+	line-height: 2em;
 }
 table td span.title h1.title{
 	border-bottom: none;
@@ -514,6 +516,9 @@ table td span.title h1.title{
 }
 table td span.speaker h2.speaker{
 	margin-top: 0;
+}
+table td.info p{
+	margin: 0;
 }
 table td .more-info{
 	display: none;
