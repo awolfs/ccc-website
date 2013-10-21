@@ -28,18 +28,12 @@ function sponsorblock($title = null)
 		'Nexenta' => 'http://www.nexenta.com',
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
 		'Leaseweb' => 'http://www.leaseweb.com/',
-		'SolidFire' => 'http://solidfire.com/',
-		'greencloud' => 'http://www.greencloud.com/',
-		'vmware' => 'http://www.vmware.com/'
+		'SolidFire' => 'http://solidfire.com/'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
 		'Apalia' => 'http://www.apalia.net/',
-		'Elasticsearch' => 'http://www.elasticsearch.com',
-		'2source4' => 'http://www.2source4.nl',
-		'iamsterdam' => 'http://www.iamsterdam.com/',
-		'cloudbees' => 'http://www.cloudbees.com/',
-		'42on' => 'http://www.42on.com'
+		'Elasticsearch' => 'http://www.elasticsearch.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
@@ -166,6 +160,7 @@ function schedule($day)
 				
 				if(count($info->speakers) > 1)
 				{
+					$bio = '';
 					foreach($info->speakers as $key)
 					{
 						$speakers .= '<a href="'.$key->web_url.'" target="_blank" title="'.$key->name.'" alt="'.$key->name.'" >'.$key->name.'</a>, ';
@@ -179,14 +174,15 @@ function schedule($day)
 						if(!empty($key->speaker_bio))
 						{ 
 							
-							$bio .= '<span class="bio"><h4>Bio</h4>'.$key->speaker_bio.'</span>';
+							$bio = '<p class="bio"><h4>Bio</h4>'.$key->speaker_bio.'</p>';
 						}
 						else
 						{
 							$bio = '';
 						}
-						$more .= '<td><h2 class="speaker">'.$key->name.'</h2>'.$bio.'</td></tr>';
+						$more .= '<td><h2 class="speaker"><a href="'.$key->web_url.'" target="_blank" title="'.$key->name.'" alt="'.$key->name.'" >'.$key->name.'</a></h2>'.$bio.'</td></tr>';
 					}
+					
 					$speaker = substr($speakers, 0, -2);
 				}
 				else
@@ -195,23 +191,22 @@ function schedule($day)
 					
 					if($info->speakers[0]->speaker_bio !== '')
 					{ 
-						$bio = '<span class="bio"><h4>Bio</h4>'.$info->speakers[0]->speaker_bio.'</span>';
+						$bio = '<td width="90"><span class="image"><a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" ><img src="'.$info->speakers[0]->image_75.'" /></a></span></td>
+						<td><p class="bio"><h4>Bio</h4>'.$info->speakers[0]->speaker_bio.'</p></td></tr>';
 					}
-					if($info->abstract !== '')
-					{ 
-						$abstract = '<span class="abstract"><h4>Abstract</h4>'.$info->abstract.'</span>';
-					};
 					
-					$more = '<tr>
-						<td width="90"><span class="image"><a href="'.$info->speakers[0]->web_url.'" target="_blank" title="'.$info->speakers[0]->name.'" alt="'.$info->speakers[0]->name.'" ><img src="'.$info->speakers[0]->image_75.'" /></a></span></td>
-						<td>'.$bio.$abstract.'</td>
-					</tr>';
+					$more = $bio;
+				}
+				
+				if($info->abstract !== '')
+				{ 
+					$abstract = '<tr><td colspan="2"><p class="abstract"><h4>Abstract</h4>'.$info->abstract.'</p></td></tr><tr><td colspan="2"><hr/></td></tr>';
 				}
 				
 				$speaker = '<span class="speaker"><h2 class="speaker">By '.$speaker.'</h2></span>';
 				$more = '<div class="more-info">
 					<table>
-						'.$more.'
+						'.$abstract.$more.'
 					</table>
 				</div>';
 			}
