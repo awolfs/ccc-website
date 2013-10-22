@@ -28,7 +28,8 @@ function sponsorblock($title = null)
 		'Nexenta' => 'http://www.nexenta.com',
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
 		'Leaseweb' => 'http://www.leaseweb.com/',
-		'SolidFire' => 'http://solidfire.com/'
+		'SolidFire' => 'http://solidfire.com/',
+		'vmware' => 'http://www.vmware.com'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
