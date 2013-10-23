@@ -29,13 +29,13 @@ function sponsorblock($title = null)
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
 		'Leaseweb' => 'http://www.leaseweb.com/',
 		'SolidFire' => 'http://solidfire.com/',
-		'vmware' => 'http://www.vmware.com',
-		'CloudOps' => 'http://www.cloudops.com/'
+		'vmware' => 'http://www.vmware.com'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
 		'Apalia' => 'http://www.apalia.net/',
-		'Elasticsearch' => 'http://www.elasticsearch.com'
+		'Elasticsearch' => 'http://www.elasticsearch.com',
+		'CloudOps' => 'http://www.cloudops.com/'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
