@@ -18,7 +18,8 @@ function sponsorblock($title = null)
 	);
 	$platinum = array(
 		'Juniper' => 'http://www.juniper.net',
-		'Sungard' => 'http://www.sungard.com'
+		'Sungard' => 'http://www.sungard.com',
+		'Akamai' => 'http://www.akamai.com'
 	);
 
 	$gold = array(
