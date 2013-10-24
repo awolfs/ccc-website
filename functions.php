@@ -30,7 +30,8 @@ function sponsorblock($title = null)
 		'Ikoula' => 'http://express.ikoula.co.uk/cloudstack',
 		'Leaseweb' => 'http://www.leaseweb.com/',
 		'SolidFire' => 'http://solidfire.com/',
-		'vmware' => 'http://www.vmware.com'
+		'vmware' => 'http://www.vmware.com',
+		'greencloud' => 'http://www.greencloud.com/ccceu13'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
