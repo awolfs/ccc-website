@@ -19,6 +19,7 @@ $menu = '<div class="sixteen columns">
 							<li><a href="/event/CloudStack-CIO-event" title="CloudStack CIO event" alt="CloudStack CIO event"'; $menu .= ($page === 'CloudStack-CIO-event') ? ' class="active"' : ''; $menu .= '>CloudStack CIO event</a></li>
 							<li><a href="/event/registration" title="Registration" alt="Registration"'; $menu .= ($page === 'registration') ? ' class="active"' : ''; $menu .= '>Registration</a></li>
 							<li><a href="/event/hotels" title="Hotels" alt="Hotels"'; $menu .= ($page === 'hotels') ? ' class="active"' : ''; $menu .= '>Hotels</a></li>
+							<li><a href="/event/about-amsterdam" title="About Amsterdam" alt="About Amsterdam"'; $menu .= ($page === 'aboutamsterdam') ? ' class="active"' : ''; $menu .= '>About Amsterdam</a></li>
 						</ul>
 					</li>
                                         <li class="top"><a href="/schedule" title="Schedule" alt="Schedule"'; $menu .= ($page === 'schedule') ? ' class="active"' : ''; $menu .= '>Schedule</a>

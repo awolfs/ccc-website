@@ -572,33 +572,6 @@ table .color-eight{
 	background-color: #facce5;
 }
 
-/*
-table .color-one{
-	background-color: #8d67ce;
-}
-table .color-two{
-	background-color: #c87d51;
-}
-table .color-three{
-	background-color: #c7b851;
-}
-table .color-four{
-	background-color: #cf67a8;
-}
-table .color-five{
-	background-color: #67a9cf;
-}
-table .color-six{
-	background-color: #b3dd54;
-}
-table .color-seven{
-	background-color: #fff24d;
-}
-table .color-eight{
-	background-color: #ee4da5;
-}
-*/
-
 table td .more-info table{
 	border: none;
 }
@@ -611,6 +584,14 @@ ol li{
 	padding-top: 6px;
 	padding-bottom: 6px;
 }
+ul.list li{
+	line-height: 1.8em;
+}
+ul.list{
+	list-style-type: disc;
+	margin-left: 18px;
+}
+
 
 /* TABLET - Tablet Portrait size to standard 960 (devices and browsers) */
 
