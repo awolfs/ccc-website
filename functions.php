@@ -31,7 +31,8 @@ function sponsorblock($title = null)
 		'Leaseweb' => 'http://www.leaseweb.com/',
 		'SolidFire' => 'http://solidfire.com/',
 		'vmware' => 'http://www.vmware.com',
-		'greencloud' => 'http://www.greencloud.com/ccceu13'
+		'greencloud' => 'http://www.greencloud.com/ccceu13',
+		'ca' => 'http://www.ca.com'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
