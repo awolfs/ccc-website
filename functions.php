@@ -32,7 +32,8 @@ function sponsorblock($title = null)
 		'SolidFire' => 'http://solidfire.com/',
 		'vmware' => 'http://www.vmware.com',
 		'greencloud' => 'http://www.greencloud.com/ccceu13',
-		'ca' => 'http://www.ca.com'
+		'ca' => 'http://www.ca.com',
+		'splunk' => 'http://www.splunk.com'
 	);
 	$silver = array(
 		'Atom 86' => 'http://www.atom86.net/',
