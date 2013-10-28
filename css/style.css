@@ -396,7 +396,7 @@ section .sixteen.columns{
 	color: #FFF;
 	padding: 6px;
 	margin-top: -13px;
-	width: 100px;
+	width: 160px;
 	text-align: center;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -454,6 +454,13 @@ section .sixteen.columns{
 }
 .spns-box.hackathon{
 	border-color: #CCC;
+}
+.spns-box.conference-drinks div{
+	background: #89deb7; 
+	color: #FFF;
+}
+.spns-box.conference-drinks{
+	border-color: #89deb7 ;
 }
 
 header{

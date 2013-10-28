@@ -1,7 +1,7 @@
 <?php
 function sponsorbar($type, $array)
 {
-	$list = '<div class="spns-box '.strtolower($type).'"><div>'.$type.'</div><ul>';
+	$list = '<div class="spns-box '.strtolower(str_replace(' ', '-', $type)).'"><div>'.$type.'</div><ul>';
 	foreach($array as $brand => $url)
 	{
 		$list .= '<li><a href="'.$url.'" title="'.$brand.'" alt="'.$brand.'" target="_blank"><img src="/images/sponsors/'.strtolower(str_replace(' ', '', $brand)).'.png" alt="'.$brand.'" title="'.$brand.'" /></a></li>';
@@ -47,6 +47,9 @@ function sponsorblock($title = null)
 	$community = array(
 		'Apache' => 'http://www.apache.org/'
 	);
+	$conferencedrinks = array(
+		'I Amsterdam' => 'http://www.iamsterdam.com/en-GB/Experience'
+	);
 	
 	if($title != null)
 	{
@@ -63,8 +66,9 @@ function sponsorblock($title = null)
 	$s = (!empty($silver)) ? sponsorbar('Silver', $silver) : '';
 	$h = (!empty($hackathon)) ? sponsorbar('Hackathon', $hackathon) : '';
 	$c = (!empty($community)) ? sponsorbar('Community', $community) : '';
+	$cd = (!empty($conferencedrinks)) ? sponsorbar('Conference drinks', $conferencedrinks) : '';
 	
-	echo $d.$p.$g.$s.$h.$c;
+	echo $d.$p.$g.$s.$h.$c.$cd;
 }
 
 function scheduleColorScheme()
