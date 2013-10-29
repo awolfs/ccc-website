@@ -41,7 +41,7 @@ function sponsorblock($title = null)
 		'Elasticsearch' => 'http://www.elasticsearch.com',
 		'CloudOps' => 'http://www.cloudops.com/',
 		'cloudbees' => 'http://www.cloudbees.com',
-		'opscode' => 'www.opscode.com'
+		'opscode' => 'http://www.opscode.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
