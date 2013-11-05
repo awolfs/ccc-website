@@ -42,7 +42,8 @@ function sponsorblock($title = null)
 		'CloudOps' => 'http://www.cloudops.com/',
 		'cloudbees' => 'http://www.cloudbees.com',
 		'opscode' => 'http://www.opscode.com',
-		'cfengine' => 'http://www.cfengine.com'
+		'cfengine' => 'http://www.cfengine.com',
+                'asg' => 'http://www.asg.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
