@@ -43,7 +43,7 @@ function sponsorblock($title = null)
 		'cloudbees' => 'http://www.cloudbees.com',
 		'opscode' => 'http://www.opscode.com',
 		'cfengine' => 'http://www.cfengine.com',
-                '2source4' => 'http://www.2source4.com'
+                '2source4' => 'http://www.2source4.com',
                 'asg' => 'http://www.asg.com'
 	);
 	$hackathon = array(
