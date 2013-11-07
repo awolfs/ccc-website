@@ -16,14 +16,13 @@ $menu = '<div class="sixteen columns">
 					<li><a href="/home" title="Home" alt="Home"'; $menu .= ($page === 'home') ? ' class="active"' : ''; $menu .= '>Home</a></li>
 					<li class="top"><a href="/event" title="Event" alt="Event"'; $menu .= ($page === 'event') ? ' class="active"' : ''; $menu .= '>Event</a>
 						<ul>
-							<li><a href="/event/CloudStack-CIO-event" title="CloudStack CIO event" alt="CloudStack CIO event"'; $menu .= ($page === 'CloudStack-CIO-event') ? ' class="active"' : ''; $menu .= '>CloudStack CIO event</a></li>
 							<li><a href="/event/registration" title="Registration" alt="Registration"'; $menu .= ($page === 'registration') ? ' class="active"' : ''; $menu .= '>Registration</a></li>
 							<li><a href="/event/hotels" title="Hotels" alt="Hotels"'; $menu .= ($page === 'hotels') ? ' class="active"' : ''; $menu .= '>Hotels</a></li>
 							<li><a href="/event/about-amsterdam" title="About Amsterdam" alt="About Amsterdam"'; $menu .= ($page === 'aboutamsterdam') ? ' class="active"' : ''; $menu .= '>About Amsterdam</a></li>
 						</ul>
 					</li>
-                                        <li class="top"><a href="/schedule" title="Schedule" alt="Schedule"'; $menu .= ($page === 'schedule') ? ' class="active"' : ''; $menu .= '>Schedule</a>
-                                        	<ul>
+                    <li class="top"><a href="/schedule" title="Schedule" alt="Schedule"'; $menu .= ($page === 'schedule') ? ' class="active"' : ''; $menu .= '>Schedule</a>
+                        <ul>
 							<li><a href="/schedule/wednesday" title="Hackday on Wednesday" alt="Hackday on Wednesday"'; $menu .= ($page === 'wednesday') ? ' class="active"' : ''; $menu .= '>Hackday on Wednesday</a></li>
 							<li><a href="/schedule/thursday" title="Conference Schedule Thursday" alt="Conference Schedule Thursday"'; $menu .= ($page === 'thursday') ? ' class="active"' : ''; $menu .= '>Conference Schedule Thursday</a></li>
 							<li><a href="/schedule/friday" title="Conference Schedule Friday" alt="Conference Schedule Friday"'; $menu .= ($page === 'friday') ? ' class="active"' : ''; $menu .= '>Conference Schedule Friday</a></li>
@@ -31,13 +30,13 @@ $menu = '<div class="sixteen columns">
 					<li><a href="/sponsors" title="Sponsors" alt="Sponsors"'; $menu .= ($page === 'sponsors') ? ' class="active"' : ''; $menu .= '>Sponsors</a></li>
 					<li><a href="/call-for-papers" title="Call for Papers" alt="Call for Papers"'; $menu .= ($page === 'call-for-papers') ? ' class="active"' : ''; $menu .= '>Call for Papers</a></li>
                                         
-                                        <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
-                                                <ul>
-                                                        <li><a href="/press" title="Press info" alt="Press info"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press info</a></li>
-                                                        <li><a href="/press-journalist-and-analyst" title="Press info Journalist and Analyst" alt="Journalist and Analyst"'; $menu .= ($page === 'press-journalist-and-analyst') ? ' class="active"' : ''; $menu .= '>Journalist and Analyst</a></li>
-                                                        <li><a href="/press-partners-and-sponsors" title="Press info Partners and Sponsors" alt="Press info"'; $menu .= ($page === 'press-partner-and-sponsors') ? ' class="active"' : ''; $menu .= '>Partners and Sponsors</a></li>
-                                                        <li><a href="/press-releases" title="Press releases" alt="Press releases"'; $menu .= ($page === 'press-releases') ? ' class="active"' : ''; $menu .= '>Press Releases</a></li>
-                                                </ul>
+                    <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
+                        <ul>
+                            <li><a href="/press" title="Press info" alt="Press info"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press info</a></li>
+                            <li><a href="/press-journalist-and-analyst" title="Press info Journalist and Analyst" alt="Journalist and Analyst"'; $menu .= ($page === 'press-journalist-and-analyst') ? ' class="active"' : ''; $menu .= '>Journalist and Analyst</a></li>
+                            <li><a href="/press-partners-and-sponsors" title="Press info Partners and Sponsors" alt="Press info"'; $menu .= ($page === 'press-partner-and-sponsors') ? ' class="active"' : ''; $menu .= '>Partners and Sponsors</a></li>
+                            <li><a href="/press-releases" title="Press releases" alt="Press releases"'; $menu .= ($page === 'press-releases') ? ' class="active"' : ''; $menu .= '>Press Releases</a></li>
+                        </ul>
 					<li><a href="/contact" title="Contact" alt="Contact"'; $menu .= ($page === 'contact') ? ' class="active"' : ''; $menu .= '>Contact</a></li>
 				</ul>
 			</nav>
