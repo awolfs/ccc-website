@@ -46,7 +46,8 @@ function sponsorblock($title = null)
                 '2source4' => 'http://www.2source4.com',
                 'asg' => 'http://www.asg.com',
                 'inktank' => 'http://www.inktank.com',
-                'trendmicro' => 'http://www.trendmicro.co.uk'
+                'trendmicro' => 'http://www.trendmicro.co.uk',
+                '42on' => 'http://www.42on.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
