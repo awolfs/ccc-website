@@ -43,11 +43,11 @@ function sponsorblock($title = null)
 		'cloudbees' => 'http://www.cloudbees.com',
 		'opscode' => 'http://www.opscode.com',
 		'cfengine' => 'http://www.cfengine.com',
-                '2source4' => 'http://www.2source4.com',
-                'asg' => 'http://www.asg.com',
-                'inktank' => 'http://www.inktank.com',
-                'trendmicro' => 'http://www.trendmicro.co.uk',
-                '42on' => 'http://www.42on.com'
+		'2source4' => 'http://www.2source4.com',
+		'asg' => 'http://www.asg.com',
+		'inktank' => 'http://www.inktank.com',
+		'trendmicro' => 'http://www.trendmicro.co.uk',
+		'42on' => 'http://www.42on.com'
 	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
@@ -57,6 +57,12 @@ function sponsorblock($title = null)
 	);
 	$conferencedrinks = array(
 		'I Amsterdam' => 'http://www.iamsterdam.com/en-GB/Experience'
+	);
+	$conferencedrinks = array(
+		'I Amsterdam' => 'http://www.iamsterdam.com/en-GB/Experience'
+	);
+	$developerlounge = array(
+		'Cloudsoft' => 'http://www.cloudsoftcorp.com/'
 	);
 	
 	if($title != null)
@@ -75,8 +81,9 @@ function sponsorblock($title = null)
 	$h = (!empty($hackathon)) ? sponsorbar('Hackathon', $hackathon) : '';
 	$c = (!empty($community)) ? sponsorbar('Community', $community) : '';
 	$cd = (!empty($conferencedrinks)) ? sponsorbar('Conference drinks', $conferencedrinks) : '';
+	$dl = (!empty($developerlounge)) ? sponsorbar('Developer lounge', $developerlounge) : '';
 	
-	echo $d.$p.$g.$s.$h.$c.$cd;
+	echo $d.$p.$g.$s.$h.$c.$cd.$dl;
 }
 
 function scheduleColorScheme()

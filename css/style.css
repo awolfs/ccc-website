@@ -396,6 +396,7 @@ section .sixteen.columns{
 	color: #FFF;
 	padding: 6px;
 	margin-top: -13px;
+	margin-bottom: 10px;
 	width: 160px;
 	text-align: center;
 	-webkit-border-radius: 5px;
@@ -456,11 +457,19 @@ section .sixteen.columns{
 	border-color: #CCC;
 }
 .spns-box.conference-drinks div{
-	background: #89deb7; 
+	background: #ffa900; 
 	color: #FFF;
 }
 .spns-box.conference-drinks{
-	border-color: #89deb7 ;
+	border-color: #ffa900;
+}
+
+.spns-box.developer-lounge div{
+	background: #b800ff; 
+	color: #FFF;
+}
+.spns-box.developer-lounge{
+	border-color: #b800ff;
 }
 
 header{
