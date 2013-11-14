@@ -49,6 +49,9 @@ function sponsorblock($title = null)
 		'trendmicro' => 'http://www.trendmicro.co.uk',
 		'42on' => 'http://www.42on.com'
 	);
+        $developerlounge = array(
+                 'Cloudsoft' => 'http://www.cloudsoftcorp.com/'
+        );
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
 	);
@@ -60,9 +63,6 @@ function sponsorblock($title = null)
 	);
 	$conferencedrinks = array(
 		'I Amsterdam' => 'http://www.iamsterdam.com/en-GB/Experience'
-	);
-	$developerlounge = array(
-		'Cloudsoft' => 'http://www.cloudsoftcorp.com/'
 	);
 	
 	if($title != null)
