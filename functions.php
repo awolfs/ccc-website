@@ -83,7 +83,7 @@ function sponsorblock($title = null)
 	$cd = (!empty($conferencedrinks)) ? sponsorbar('Conference drinks', $conferencedrinks) : '';
 	$dl = (!empty($developerlounge)) ? sponsorbar('Developer lounge', $developerlounge) : '';
 	
-	echo $d.$p.$g.$s.$h.$c.$cd.$dl;
+	echo $d.$p.$g.$s.$dl.$h.$c.$cd;
 }
 
 function scheduleColorScheme()
