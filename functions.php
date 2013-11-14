@@ -174,6 +174,8 @@ function schedule($day)
 					
 					$color = ' color-six';
 				break;
+				default:
+					$color = ' color-one';
 			}
 			
 			if(isset($info->speakers[0]->name))
