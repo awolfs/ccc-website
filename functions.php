@@ -49,17 +49,14 @@ function sponsorblock($title = null)
 		'trendmicro' => 'http://www.trendmicro.co.uk',
 		'42on' => 'http://www.42on.com'
 	);
-        $developerlounge = array(
-                 'Cloudsoft' => 'http://www.cloudsoftcorp.com/'
-        );
+	$developerlounge = array(
+			 'Cloudsoft' => 'http://www.cloudsoftcorp.com/'
+	);
 	$hackathon = array(
 		'Exoscale' => 'http://www.exoscale.ch/'
 	);
 	$community = array(
 		'Apache' => 'http://www.apache.org/'
-	);
-	$conferencedrinks = array(
-		'I Amsterdam' => 'http://www.iamsterdam.com/en-GB/Experience'
 	);
 	$conferencedrinks = array(
 		'I Amsterdam' => 'http://www.iamsterdam.com/en-GB/Experience'
