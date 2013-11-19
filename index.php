@@ -33,7 +33,6 @@ $menu = '<div class="sixteen columns">
                     <li class="top"><a href="/press" title="Press" alt="Press"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press</a>
                         <ul>
                             <li><a href="/press" title="Press info" alt="Press info"'; $menu .= ($page === 'press') ? ' class="active"' : ''; $menu .= '>Press info</a></li>
-                            <li><a href="/press-journalist-and-analyst" title="Press info Journalist and Analyst" alt="Journalist and Analyst"'; $menu .= ($page === 'press-journalist-and-analyst') ? ' class="active"' : ''; $menu .= '>Journalist and Analyst</a></li>
                             <li><a href="/press-partners-and-sponsors" title="Press info Partners and Sponsors" alt="Press info"'; $menu .= ($page === 'press-partner-and-sponsors') ? ' class="active"' : ''; $menu .= '>Partners and Sponsors</a></li>
                             <li><a href="/press-releases" title="Press releases" alt="Press releases"'; $menu .= ($page === 'press-releases') ? ' class="active"' : ''; $menu .= '>Press Releases</a></li>
 							<li><a href="/press-coverage" title="Press coverage" alt="Press coverage"'; $menu .= ($page === 'press-coverage') ? ' class="active"' : ''; $menu .= '>Press coverage</a></li>
