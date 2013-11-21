@@ -369,6 +369,9 @@ a.green-button:hover{
 .green-box .one-third.column{
 	width: 293px
 }
+.green-box .four.columns{
+	width: 215px;
+}
 section .sixteen.columns{
 	margin-top: 20px;
 }
