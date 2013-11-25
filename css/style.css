@@ -273,7 +273,7 @@ h2.speaker{
 h3.bioabstract{
 	font-size: 1.2em;
 }
-p,a, .columns{
+p, a, .line-height-columns{
 	line-height: 1.8em;
 }
 p img{
