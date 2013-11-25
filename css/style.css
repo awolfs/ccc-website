@@ -273,7 +273,7 @@ h2.speaker{
 h3.bioabstract{
 	font-size: 1.2em;
 }
-p{
+p,a, .columns{
 	line-height: 1.8em;
 }
 p img{
@@ -610,7 +610,6 @@ ul.list{
 	list-style-type: disc;
 	margin-left: 18px;
 }
-
 
 /* TABLET - Tablet Portrait size to standard 960 (devices and browsers) */
 
