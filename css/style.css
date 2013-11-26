@@ -372,10 +372,19 @@ a.green-button:hover{
 .green-box .four.columns{
 	width: 215px;
 }
+.green-box .seven.columns{
+	width: 378px;
+}
+.green-box .eight.columns{
+	width: 400px;
+}
+.green-box .nine.columns{
+	width: 498px;
+}
 section .sixteen.columns{
 	margin-top: 20px;
 }
-.green-box iframe{
+.green-box iframe, .green-box img{
 	border: 1px solid #FFF;
 }
 .spns-box{
